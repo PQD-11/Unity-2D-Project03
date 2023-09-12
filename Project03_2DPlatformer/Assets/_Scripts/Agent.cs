@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Rendering.Universal;
 
 public class Agent : MonoBehaviour
@@ -20,6 +21,8 @@ public class Agent : MonoBehaviour
     [Header("State Debugging: ")]
     public string stateName = "";
 
+    [field: SerializeField] private UnityEvent OnRespawnRequired { get; set; }
+
     private void Awake()
     {
         playerInput = GetComponentInParent<PlayerInput>();
@@ -31,7 +34,7 @@ public class Agent : MonoBehaviour
 
         State[] states = GetComponentsInChildren<State>();
 
-        foreach(var state in states)
+        foreach (var state in states)
         {
             state.InitializeState(this);
         }
@@ -42,11 +45,13 @@ public class Agent : MonoBehaviour
         TransitionToState(IdleState);
     }
 
-    private void Update() {
+    private void Update()
+    {
         currentState.StateUpdate();
     }
-    
-    private void FixedUpdate() {
+
+    private void FixedUpdate()
+    {
         groundDetector.CheckIsGrounded();
         currentState.StateFixedUpdate();
     }
@@ -56,7 +61,7 @@ public class Agent : MonoBehaviour
         if (desiredState == null) { return; }
         if (currentState != null)
         {
-             currentState.Exit();
+            currentState.Exit();
         }
 
         previousState = currentState;
@@ -72,5 +77,10 @@ public class Agent : MonoBehaviour
         {
             stateName = currentState.GetType().ToString();
         }
+    }
+
+    public void AgentDied()
+    {
+        OnRespawnRequired?.Invoke(); 
     }
 }
