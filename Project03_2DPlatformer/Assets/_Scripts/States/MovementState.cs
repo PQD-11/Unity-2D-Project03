@@ -8,7 +8,7 @@ public class MovementState : State
     [SerializeField]
     protected MovementData movementData;
     public State IdleState;
-    public float acceleration, deacceleration, maxSpeed;
+
     private void Awake()
     {
         movementData = GetComponentInParent<MovementData>();
@@ -17,7 +17,7 @@ public class MovementState : State
     protected override void EnterState()
     {
         agent.agentAnimation.PlayAnimation(AnimationType.run);
-        
+
         movementData.horizontalMovementDirection = 0;
         movementData.currentSpeed = 0;
         movementData.currentVelocity = Vector2.zero;
@@ -25,7 +25,7 @@ public class MovementState : State
 
     public override void StateUpdate()
     {
-        base.StateUpdate();
+
         CalculateVelocity();
         SetPlayerVelocity();
         if (Mathf.Abs(agent.rb2d.velocity.x) < 0.01f)
@@ -37,6 +37,16 @@ public class MovementState : State
     protected void SetPlayerVelocity()
     {
         agent.rb2d.velocity = movementData.currentVelocity;
+
+        // if ((this is JumpState) || (this is FallState))
+        // {
+        //     Debug.Log("Jump");
+        //     agent.rb2d.velocity = new Vector2(movementData.currentVelocity.x * 0.75f, movementData.currentVelocity.y);
+        // }
+        // else
+        // {
+        //     agent.rb2d.velocity = movementData.currentVelocity;
+        // }
     }
 
     protected void CalculateVelocity()
@@ -51,13 +61,13 @@ public class MovementState : State
     {
         if (Mathf.Abs(movementVector.x) > 0)
         {
-            movementData.currentSpeed += acceleration * Time.deltaTime;
+            movementData.currentSpeed += agent.agentDataSO.acceleration * Time.deltaTime;
         }
         else
         {
-            movementData.currentSpeed -= deacceleration * Time.deltaTime;
+            movementData.currentSpeed -= agent.agentDataSO.deacceleration * Time.deltaTime;
         }
-        movementData.currentSpeed = Mathf.Clamp(movementData.currentSpeed, 0, maxSpeed);
+        movementData.currentSpeed = Mathf.Clamp(movementData.currentSpeed, 0, agent.agentDataSO.maxSpeed);
     }
 
     protected void CalculateHorizontalDirection(MovementData movementData)

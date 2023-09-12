@@ -29,16 +29,19 @@ public class GroundDetector : MonoBehaviour
     public void CheckIsGrounded()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(agentCollider.bounds.center + new Vector3(boxCastXOffset, boxCastYOffset, 0),
-            new Vector2(boxCastWidth, boxCastHeight), 
-            0, 
-            Vector2.down, 
-            0, 
+            new Vector2(boxCastWidth, boxCastHeight),
+            0,
+            Vector2.down,
+            0,
             groundMask
         );
 
         if (raycastHit.collider != null)
         {
-            isGrounded = true;
+            if (raycastHit.collider.IsTouching(agentCollider))
+            {
+                isGrounded = true;
+            }
         }
         else
         {
@@ -54,7 +57,7 @@ public class GroundDetector : MonoBehaviour
         {
             Gizmos.color = gizmoColorIsGrounded;
         }
-        
+
         Gizmos.DrawWireCube(agentCollider.bounds.center + new Vector3(boxCastXOffset, boxCastYOffset, 0), new Vector3(boxCastWidth, boxCastHeight));
     }
 

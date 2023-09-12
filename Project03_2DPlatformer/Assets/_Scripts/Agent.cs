@@ -6,13 +6,13 @@ using UnityEngine.Rendering.Universal;
 
 public class Agent : MonoBehaviour
 {
+    public AgentDataSO agentDataSO;
     public Rigidbody2D rb2d;
     public PlayerInput playerInput;
     public AgentAnimation agentAnimation;
-
     public AgentRenderer agentRenderer;
-
     public GroundDetector groundDetector;
+    public ClimbingDetector climbingDetector;
 
     public State currentState = null, previousState = null;
     public State IdleState;
@@ -27,6 +27,8 @@ public class Agent : MonoBehaviour
         agentAnimation = GetComponentInChildren<AgentAnimation>();
         agentRenderer = GetComponentInChildren<AgentRenderer>();
         groundDetector = GetComponentInChildren<GroundDetector>();
+        climbingDetector = GetComponentInChildren<ClimbingDetector>();
+
         State[] states = GetComponentsInChildren<State>();
 
         foreach(var state in states)
@@ -48,8 +50,6 @@ public class Agent : MonoBehaviour
         groundDetector.CheckIsGrounded();
         currentState.StateFixedUpdate();
     }
-
-
 
     public void TransitionToState(State desiredState)
     {

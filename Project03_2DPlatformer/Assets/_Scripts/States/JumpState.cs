@@ -6,15 +6,13 @@ using UnityEngine;
 
 public class JumpState : MovementState
 {
-    public float jumpForce = 12;
-    public float lowJumpMultiplier = 2;
-    public State FallState;
+    [SerializeField] public State ClimbState;
     private bool jumpPressed;
     protected override void EnterState()
     {
         agent.agentAnimation.PlayAnimation(AnimationType.jump);
         // movementData.currentVelocity = agent.rb2d.velocity;
-        movementData.currentVelocity.y = jumpForce;
+        movementData.currentVelocity.y = agent.agentDataSO.jumpForce;
         agent.rb2d.velocity = movementData.currentVelocity;
         jumpPressed = true;
     }
@@ -38,6 +36,10 @@ public class JumpState : MovementState
         {
             agent.TransitionToState(FallState);
         }
+        else if (agent.climbingDetector.CanClimb && Mathf.Abs(agent.playerInput.MovementVector.y) > 0)
+        {
+            agent.TransitionToState(ClimbState);
+        }
     }
 
     private void ControlJumpHeight()
@@ -45,7 +47,8 @@ public class JumpState : MovementState
         if (!jumpPressed)
         {
             movementData.currentVelocity = agent.rb2d.velocity;
-            movementData.currentVelocity.y += lowJumpMultiplier * Physics2D.gravity.y * Time.deltaTime;
+            movementData.currentVelocity.y += agent.agentDataSO.lowJumpMultiplier * Physics2D.gravity.y * Time.deltaTime;
+            movementData.currentVelocity.x = movementData.currentVelocity.x / 2;
             agent.rb2d.velocity = movementData.currentVelocity;
         }
     }

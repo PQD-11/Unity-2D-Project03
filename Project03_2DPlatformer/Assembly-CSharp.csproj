@@ -36,16 +36,21 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scripts\Data\AgentDataSO.cs" />
      <Compile Include="Assets\_Scripts\States\IdleState.cs" />
+     <Compile Include="Assets\_Scripts\States\FallState.cs" />
      <Compile Include="Assets\_Scripts\States\MovementState.cs" />
      <Compile Include="Assets\_Scripts\States\AgentRenderer.cs" />
      <Compile Include="Assets\_Scripts\States\MovementData.cs" />
      <Compile Include="Assets\_Scripts\Agent.cs" />
      <Compile Include="Assets\_Scripts\States\State.cs" />
+     <Compile Include="Assets\_Scripts\States\JumpState.cs" />
      <Compile Include="Assets\_Scripts\GroundDetector.cs" />
      <Compile Include="Assets\_Scripts\PlayerInput.cs" />
+     <Compile Include="Assets\_Scripts\ClimbingDetector.cs" />
+     <Compile Include="Assets\_Scripts\ParallaxEffect.cs" />
      <Compile Include="Assets\_Scripts\AgentAnimation.cs" />
-     <Compile Include="Assets\_Scripts\States\JumpState.cs" />
+     <Compile Include="Assets\_Scripts\States\ClimbingState.cs" />
      <None Include="Assets\_Assets\_Fonts\homespun.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.3f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

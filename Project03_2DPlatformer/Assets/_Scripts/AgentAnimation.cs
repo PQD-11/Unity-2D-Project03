@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class AgentAnimation : MonoBehaviour
             case AnimationType.attack:
                 break;
             case AnimationType.climb:
+                Play("Climbing");
                 break;
             case AnimationType.die:
                 break;
@@ -41,6 +43,16 @@ public class AgentAnimation : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public void StopAnimation()
+    {
+        animator.enabled = false;
+    }
+
+    public void StartAnimation()
+    {
+        animator.enabled = true;
     }
 
     public void Play(string name)
