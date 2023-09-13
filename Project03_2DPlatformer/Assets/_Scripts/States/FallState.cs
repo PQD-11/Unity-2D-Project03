@@ -7,12 +7,12 @@ public class FallState : MovementState
     [SerializeField] public State ClimbState;
     protected override void EnterState()
     {
-        agent.agentAnimation.PlayAnimation(AnimationType.fall);
+        agent.animationManager.PlayAnimation(AnimationType.fall);
 
     }
     protected override void HandleJumpPressed()
     {
-        agent.agentAnimation.PlayAnimation(AnimationType.fall);
+        agent.animationManager.PlayAnimation(AnimationType.fall);
     }
 
     public override void StateUpdate()

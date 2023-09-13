@@ -10,7 +10,7 @@ public class JumpState : MovementState
     private bool jumpPressed;
     protected override void EnterState()
     {
-        agent.agentAnimation.PlayAnimation(AnimationType.jump);
+        agent.animationManager.PlayAnimation(AnimationType.jump);
         // movementData.currentVelocity = agent.rb2d.velocity;
         movementData.currentVelocity.y = agent.agentDataSO.jumpForce;
         agent.rb2d.velocity = movementData.currentVelocity;

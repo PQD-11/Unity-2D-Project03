@@ -4,16 +4,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering.Universal;
+using WeaponSystem;
 
 public class Agent : MonoBehaviour
 {
     public AgentDataSO agentDataSO;
     public Rigidbody2D rb2d;
     public PlayerInput playerInput;
-    public AgentAnimation agentAnimation;
+    public AgentAnimation animationManager;
     public AgentRenderer agentRenderer;
     public GroundDetector groundDetector;
     public ClimbingDetector climbingDetector;
+    
+    [HideInInspector]
+    public AgentWeaponManager agentWeaponManager;
 
     public State currentState = null, previousState = null;
     public State IdleState;
@@ -27,10 +31,11 @@ public class Agent : MonoBehaviour
     {
         playerInput = GetComponentInParent<PlayerInput>();
         rb2d = GetComponent<Rigidbody2D>();
-        agentAnimation = GetComponentInChildren<AgentAnimation>();
+        animationManager = GetComponentInChildren<AgentAnimation>();
         agentRenderer = GetComponentInChildren<AgentRenderer>();
         groundDetector = GetComponentInChildren<GroundDetector>();
         climbingDetector = GetComponentInChildren<ClimbingDetector>();
+        agentWeaponManager = GetComponentInChildren<AgentWeaponManager>();
 
         State[] states = GetComponentsInChildren<State>();
 

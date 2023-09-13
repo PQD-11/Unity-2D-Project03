@@ -9,7 +9,7 @@ public class ClimbingState : State
 
     protected override void EnterState()
     {
-        agent.agentAnimation.PlayAnimation(AnimationType.climb);
+        agent.animationManager.PlayAnimation(AnimationType.climb);
         previousGravityScale = agent.rb2d.gravityScale;
         agent.rb2d.gravityScale = 0;
         agent.rb2d.velocity = Vector2.zero;
@@ -18,14 +18,14 @@ public class ClimbingState : State
     protected override void ExitState()
     {
         agent.rb2d.gravityScale = previousGravityScale;
-        agent.agentAnimation.StartAnimation();
+        agent.animationManager.StartAnimation();
     }
 
     public override void StateUpdate()
     {
         if (agent.playerInput.MovementVector.magnitude > 0)
         {
-            agent.agentAnimation.StartAnimation();
+            agent.animationManager.StartAnimation();
             agent.rb2d.velocity = new Vector2(
                 agent.playerInput.MovementVector.x * agent.agentDataSO.climbHorizontalSpeed,
                 agent.playerInput.MovementVector.y * agent.agentDataSO.climbVecticalSpeed
@@ -33,7 +33,7 @@ public class ClimbingState : State
         }
         else
         {
-            agent.agentAnimation.StopAnimation();
+            agent.animationManager.StopAnimation();
             agent.rb2d.velocity = Vector2.zero;
         }
 

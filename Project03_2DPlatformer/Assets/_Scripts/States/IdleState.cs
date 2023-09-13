@@ -8,7 +8,7 @@ public class IdleState : State
     public State MoveState, ClimbState;
     protected override void EnterState()
     {
-        agent.agentAnimation.PlayAnimation(AnimationType.idle);
+        agent.animationManager.PlayAnimation(AnimationType.idle);
         // if (agent.groundDetector.isGrounded)
         // {
         //     agent.rb2d.velocity = Vector2.zero;
