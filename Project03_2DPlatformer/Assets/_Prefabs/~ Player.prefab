@@ -1089,6 +1089,10 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: -4549544302236747388, guid: 7a36968b233f01642bc6224d149b0995, type: 2}
+    - target: {fileID: 8120070170974013222, guid: cf7941741a339d846925c2d5b47398bf, type: 3}
+      propertyPath: hittableLayerMask.m_Bits
+      value: 82432
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf7941741a339d846925c2d5b47398bf, type: 3}
 --- !u!4 &1748037490011998466 stripped

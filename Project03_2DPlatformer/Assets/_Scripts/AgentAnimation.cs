@@ -22,6 +22,7 @@ public class AgentAnimation : MonoBehaviour
         switch (animationType)
         {
             case AnimationType.attack:
+                Play("Attack");
                 break;
             case AnimationType.climb:
                 Play("Climbing");
