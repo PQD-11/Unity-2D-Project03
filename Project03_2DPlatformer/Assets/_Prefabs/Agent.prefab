@@ -1,5 +1,51 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &465244121471856220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4194172827323814823}
+  - component: {fileID: 777970802713789956}
+  m_Layer: 0
+  m_Name: DieFeedback
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4194172827323814823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465244121471856220}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7468461326805162495}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &777970802713789956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465244121471856220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408f5484e01272f4bbb950c53c6b4f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: f25b087c805825847b8e4c620d9bc989, type: 3}
+  targetAudioSource: {fileID: 7492152315914914199}
+  volume: 1
 --- !u!1 &1107321233135501328
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,6 +219,52 @@ MonoBehaviour:
   audioClip: {fileID: 0}
   targetAudioSource: {fileID: 7492152315914914199}
   volume: 1
+--- !u!1 &5119413505981334394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4526436088777959694}
+  - component: {fileID: 6651527951077583191}
+  m_Layer: 0
+  m_Name: GetHitFeedback
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4526436088777959694
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5119413505981334394}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7468461326805162495}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6651527951077583191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5119413505981334394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408f5484e01272f4bbb950c53c6b4f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 2d9784548ba836e43b4c5722046222cb, type: 3}
+  targetAudioSource: {fileID: 7492152315914914199}
+  volume: 1
 --- !u!1 &5872460947877221758
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +335,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 174641909
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: dc1a5260470ab9d43a040c4e9c89bead, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -350,7 +442,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1923980661
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 7495373321489435158, guid: 31e82f5eaa4e3b64082ddb3d16a637af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -514,6 +606,7 @@ GameObject:
   - component: {fileID: 7468461326731122860}
   - component: {fileID: 7468461326731122851}
   - component: {fileID: 7468461326731122849}
+  - component: {fileID: 5889733801652202094}
   m_Layer: 3
   m_Name: Agent
   m_TagString: Player
@@ -551,8 +644,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01, y: -0.07329011}
-  m_Size: {x: 0.5301752, y: 1.1465802}
+  m_Offset: {x: -0.06274223, y: -0.03689742}
+  m_Size: {x: 0.8454914, y: 1.2193656}
   m_Direction: 0
 --- !u!50 &7468461326731122861
 Rigidbody2D:
@@ -594,10 +687,11 @@ MonoBehaviour:
   agentRenderer: {fileID: 0}
   groundDetector: {fileID: 0}
   climbingDetector: {fileID: 0}
-  agentWeaponManager: {fileID: 0}
   currentState: {fileID: 0}
   previousState: {fileID: 0}
   IdleState: {fileID: 7468461326805162494}
+  agentWeaponManager: {fileID: 0}
+  stateFactory: {fileID: 0}
   stateName: 
   <OnRespawnRequired>k__BackingField:
     m_PersistentCalls:
@@ -614,6 +708,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  <OnAgentDie>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &7468461326731122851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,6 +735,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91bc1b27d3822584a814de82b8833eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5889733801652202094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7468461326731122863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a6d6aba85f3c14bb3c0530de3d79b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  currentHealth: 0
+  OneGetHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7468461326731122860}
+        m_TargetAssemblyTypeName: Agent, Assembly-CSharp
+        m_MethodName: GetHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7468461326731122860}
+        m_TargetAssemblyTypeName: Agent, Assembly-CSharp
+        m_MethodName: AgentDied
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnRestoreHealth:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnInitialHealth:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: HealthUI, Assembly-CSharp
+        m_MethodName: Initialize
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7468461326805162488
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,6 +815,9 @@ GameObject:
   - component: {fileID: 7468461326805162483}
   - component: {fileID: 7468461326805162482}
   - component: {fileID: 8120070170974013222}
+  - component: {fileID: 5441400583552818809}
+  - component: {fileID: 1360309573777786876}
+  - component: {fileID: 9215954316727463036}
   m_Layer: 0
   m_Name: States
   m_TagString: Untagged
@@ -674,6 +839,8 @@ Transform:
   - {fileID: 3667212315592120441}
   - {fileID: 8303076213534273976}
   - {fileID: 1593840089696563761}
+  - {fileID: 4526436088777959694}
+  - {fileID: 4194172827323814823}
   m_Father: {fileID: 7468461326731122862}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -689,17 +856,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ce5d09007b8844bb1ba146ed600a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpState: {fileID: 7468461326805162492}
-  FallState: {fileID: 7468461326805162483}
-  AttackState: {fileID: 8120070170974013222}
   OnEnter:
     m_PersistentCalls:
       m_Calls: []
   OnExit:
     m_PersistentCalls:
       m_Calls: []
-  MoveState: {fileID: 7468461326805162493}
-  ClimbState: {fileID: 7468461326805162482}
 --- !u!114 &7468461326805162493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,9 +874,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d171a2b974afe41861f61688d13efd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpState: {fileID: 7468461326805162492}
-  FallState: {fileID: 7468461326805162483}
-  AttackState: {fileID: 8120070170974013222}
   OnEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -722,7 +881,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   movementData: {fileID: 7468461326731122851}
-  IdleState: {fileID: 7468461326805162494}
   OnStep:
     m_PersistentCalls:
       m_Calls: []
@@ -738,9 +896,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0978b99661979a147b6e1237906ac97f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpState: {fileID: 7468461326805162492}
-  FallState: {fileID: 7468461326805162483}
-  AttackState: {fileID: 8120070170974013222}
   OnEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -748,11 +903,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   movementData: {fileID: 7468461326731122851}
-  IdleState: {fileID: 7468461326805162494}
   OnStep:
     m_PersistentCalls:
       m_Calls: []
-  ClimbState: {fileID: 7468461326805162482}
 --- !u!114 &7468461326805162483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -765,9 +918,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8f5994b59eb0f8468d9116cb948ba7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpState: {fileID: 7468461326805162492}
-  FallState: {fileID: 7468461326805162483}
-  AttackState: {fileID: 8120070170974013222}
   OnEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -775,7 +925,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   movementData: {fileID: 0}
-  IdleState: {fileID: 7468461326805162494}
   OnStep:
     m_PersistentCalls:
       m_Calls: []
@@ -792,16 +941,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a33e06e8a1f9e614b826df14fb93eba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpState: {fileID: 7468461326805162492}
-  FallState: {fileID: 7468461326805162483}
-  AttackState: {fileID: 8120070170974013222}
   OnEnter:
     m_PersistentCalls:
       m_Calls: []
   OnExit:
     m_PersistentCalls:
       m_Calls: []
-  IdleState: {fileID: 7468461326805162494}
 --- !u!114 &8120070170974013222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -814,16 +959,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8089ec8f9f749dd468fd9c1dbca97889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpState: {fileID: 7468461326805162492}
-  FallState: {fileID: 7468461326805162483}
-  AttackState: {fileID: 0}
   OnEnter:
     m_PersistentCalls:
       m_Calls: []
   OnExit:
     m_PersistentCalls:
       m_Calls: []
-  IdleState: {fileID: 7468461326805162494}
   hittableLayerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -842,6 +983,99 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5441400583552818809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7468461326805162488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75eb221aa14f5f499f0e75baf5d77f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6651527951077583191}
+        m_TargetAssemblyTypeName: AudioFeedback, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnExit:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1360309573777786876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7468461326805162488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e827262b154603f439627c3430102283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 777970802713789956}
+        m_TargetAssemblyTypeName: AudioFeedback, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnExit:
+    m_PersistentCalls:
+      m_Calls: []
+  timeDelayRespawn: 3
+--- !u!114 &9215954316727463036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7468461326805162488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4c34a6e72c3394bb4e2d89f6cd58b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 7468461326805162494}
+  Move: {fileID: 7468461326805162493}
+  Fall: {fileID: 7468461326805162483}
+  Jump: {fileID: 7468461326805162492}
+  Climbing: {fileID: 7468461326805162482}
+  Attack: {fileID: 8120070170974013222}
+  GetHit: {fileID: 5441400583552818809}
+  Die: {fileID: 1360309573777786876}
 --- !u!1 &8851452226363951346
 GameObject:
   m_ObjectHideFlags: 0

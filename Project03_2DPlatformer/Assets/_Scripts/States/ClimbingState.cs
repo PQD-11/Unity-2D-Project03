@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ClimbingState : State
 {
-    [SerializeField] public State IdleState;
+    // [SerializeField] public State IdleState;
     private float previousGravityScale;
 
     protected override void EnterState()
@@ -39,12 +39,17 @@ public class ClimbingState : State
 
         if (!agent.climbingDetector.CanClimb)
         {
-            agent.TransitionToState(IdleState);
+            agent.TransitionToState(agent.stateFactory.GetState(StateType.Idle));
         }
+    }
+
+    protected override void HandleAttack()
+    {
+        //prevent attack
     }
 
     protected override void HandleJumpPressed()
     {
-        agent.TransitionToState(JumpState);
+        agent.TransitionToState(agent.stateFactory.GetState(StateType.Jump));
     }
 }

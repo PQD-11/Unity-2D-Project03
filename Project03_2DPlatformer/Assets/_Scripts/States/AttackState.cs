@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class AttackState : State
 {
-    [SerializeField] protected State IdleState;
+    // [SerializeField] protected State IdleState;
     public LayerMask hittableLayerMask;
 
     protected Vector2 direction;
@@ -43,16 +43,17 @@ public class AttackState : State
 
         if (agent.groundDetector.isGrounded)
         {
-            agent.TransitionToState(IdleState);
+            agent.TransitionToState(agent.stateFactory.GetState(StateType.Idle));
         }
         else
         {
-            agent.TransitionToState(FallState);
+            agent.TransitionToState(agent.stateFactory.GetState(StateType.Fall));
         }
     }
 
     protected override void ExitState()
     {
+        agent.animationManager.ResetEvents();
         agent.agentWeaponManager.ToggleWeaponVisibility(false);
     }
 
@@ -60,8 +61,37 @@ public class AttackState : State
     {
         if (Application.isPlaying == false) { return; } // wtf pro ?
 
-        Gizmos.color =  Color.red;
+        Gizmos.color = Color.red;
         var pos = agent.agentWeaponManager.transform.position;
         agent.agentWeaponManager.GetCurrentWeapon().DrawWeaponGizmo(pos, direction);
+    }
+    protected override void HandleAttack()
+    {
+        //prevent attacking
+    }
+
+    protected override void HandleJumpPressed()
+    {
+        //dont allow jumping
+    }
+
+    protected override void HandleJumpReleased()
+    {
+
+    }
+
+    protected override void HandleMovement(Vector2 obj)
+    {
+        //stop flipping / rotation
+    }
+
+    public override void StateUpdate()
+    {
+        //prevent update
+    }
+
+    public override void StateFixedUpdate()
+    {
+        //prevent fixed update
     }
 }

@@ -28,11 +28,13 @@ public class AgentAnimation : MonoBehaviour
                 Play("Climbing");
                 break;
             case AnimationType.die:
+                Play("Die");
                 break;
             case AnimationType.fall:
                 Play("Fall");
                 break;
             case AnimationType.hit:
+                Play("GetHit");
                 break;
             case AnimationType.idle:
                 Play("Idle");

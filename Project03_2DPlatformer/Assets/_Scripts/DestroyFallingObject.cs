@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using RespawnSystem;
 using UnityEngine;
 
 public class DestroyFallingObject : MonoBehaviour
@@ -21,6 +22,15 @@ public class DestroyFallingObject : MonoBehaviour
             {
                 Destroy(collider2D.gameObject);
                 return;
+            }
+            var damageable = agent.GetComponent<Damageable>();
+            if (damageable != null)
+            {
+                damageable.GetHit(1);
+                if (damageable.CurrentHealth == 0 && agent.CompareTag("Player"))
+                {
+                    agent.GetComponent<RespawnHelper>().RespawnPlayer();
+                }
             }
             agent.AgentDied();
         }

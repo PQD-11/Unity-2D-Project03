@@ -15,17 +15,20 @@ public class Agent : MonoBehaviour
     public AgentRenderer agentRenderer;
     public GroundDetector groundDetector;
     public ClimbingDetector climbingDetector;
-    
+    public State currentState = null, previousState = null;
+    public State IdleState;
+
     [HideInInspector]
     public AgentWeaponManager agentWeaponManager;
 
-    public State currentState = null, previousState = null;
-    public State IdleState;
+    public StateFactory stateFactory;
+    private Damageable damageable;
 
     [Header("State Debugging: ")]
     public string stateName = "";
 
     [field: SerializeField] private UnityEvent OnRespawnRequired { get; set; }
+    [field: SerializeField] public UnityEvent OnAgentDie { get; set; }
 
     private void Awake()
     {
@@ -36,18 +39,21 @@ public class Agent : MonoBehaviour
         groundDetector = GetComponentInChildren<GroundDetector>();
         climbingDetector = GetComponentInChildren<ClimbingDetector>();
         agentWeaponManager = GetComponentInChildren<AgentWeaponManager>();
+        stateFactory = GetComponentInChildren<StateFactory>();
+        damageable = GetComponent<Damageable>();
 
-        State[] states = GetComponentsInChildren<State>();
-
-        foreach (var state in states)
-        {
-            state.InitializeState(this);
-        }
+        stateFactory.InitializeStates(this);
     }
     private void Start()
     {
         playerInput.OnMovement += agentRenderer.FaceDirection;
+        InitializeAgent();
+    }
+
+    private void InitializeAgent()
+    {
         TransitionToState(IdleState);
+        damageable.Initialize(agentDataSO.health);
     }
 
     private void Update()
@@ -86,6 +92,18 @@ public class Agent : MonoBehaviour
 
     public void AgentDied()
     {
-        OnRespawnRequired?.Invoke(); 
+        if (damageable.CurrentHealth > 0)
+        {
+        OnRespawnRequired?.Invoke();
+        }
+        else
+        {
+            currentState.Die();
+        }
+    }
+
+    public void GetHit()
+    {
+        currentState.GetHit();
     }
 }
