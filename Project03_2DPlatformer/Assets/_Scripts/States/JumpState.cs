@@ -36,7 +36,7 @@ public class JumpState : MovementState
         {
             agent.TransitionToState(agent.stateFactory.GetState(StateType.Fall));
         }
-        else if (agent.climbingDetector.CanClimb && Mathf.Abs(agent.playerInput.MovementVector.y) > 0)
+        else if (agent.climbingDetector.CanClimb && Mathf.Abs(agent.agentInput.MovementVector.y) > 0)
         {
             agent.TransitionToState(agent.stateFactory.GetState(StateType.Climbing));
         }

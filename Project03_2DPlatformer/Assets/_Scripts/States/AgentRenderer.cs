@@ -9,7 +9,7 @@ public class AgentRenderer : MonoBehaviour
     {
         if (Mathf.Abs(vector.x) > 0)
         {
-            transform.localScale = new Vector2(Mathf.Sign(vector.x), 1f);
+            transform.parent.localScale = new Vector2(Mathf.Sign(vector.x), 1f);
         }
     }
 }

@@ -23,12 +23,12 @@ public class ClimbingState : State
 
     public override void StateUpdate()
     {
-        if (agent.playerInput.MovementVector.magnitude > 0)
+        if (agent.agentInput.MovementVector.magnitude > 0)
         {
             agent.animationManager.StartAnimation();
             agent.rb2d.velocity = new Vector2(
-                agent.playerInput.MovementVector.x * agent.agentDataSO.climbHorizontalSpeed,
-                agent.playerInput.MovementVector.y * agent.agentDataSO.climbVecticalSpeed
+                agent.agentInput.MovementVector.x * agent.agentDataSO.climbHorizontalSpeed,
+                agent.agentInput.MovementVector.y * agent.agentDataSO.climbVecticalSpeed
                 );
         }
         else

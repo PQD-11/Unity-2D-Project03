@@ -10,7 +10,7 @@ public class Agent : MonoBehaviour
 {
     public AgentDataSO agentDataSO;
     public Rigidbody2D rb2d;
-    public PlayerInput playerInput;
+    public IAgentInput agentInput;
     public AgentAnimation animationManager;
     public AgentRenderer agentRenderer;
     public GroundDetector groundDetector;
@@ -32,7 +32,7 @@ public class Agent : MonoBehaviour
 
     private void Awake()
     {
-        playerInput = GetComponentInParent<PlayerInput>();
+        agentInput = GetComponentInParent<IAgentInput>();
         rb2d = GetComponent<Rigidbody2D>();
         animationManager = GetComponentInChildren<AgentAnimation>();
         agentRenderer = GetComponentInChildren<AgentRenderer>();
@@ -46,7 +46,7 @@ public class Agent : MonoBehaviour
     }
     private void Start()
     {
-        playerInput.OnMovement += agentRenderer.FaceDirection;
+        agentInput.OnMovement += agentRenderer.FaceDirection;
         InitializeAgent();
     }
 
@@ -94,7 +94,7 @@ public class Agent : MonoBehaviour
     {
         if (damageable.CurrentHealth > 0)
         {
-        OnRespawnRequired?.Invoke();
+            OnRespawnRequired?.Invoke();
         }
         else
         {

@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 408f5484e01272f4bbb950c53c6b4f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: f25b087c805825847b8e4c620d9bc989, type: 3}
+  audioClip: {fileID: 0}
   targetAudioSource: {fileID: 7492152315914914199}
   volume: 1
 --- !u!1 &1107321233135501328
@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 408f5484e01272f4bbb950c53c6b4f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 2d9784548ba836e43b4c5722046222cb, type: 3}
+  audioClip: {fileID: 0}
   targetAudioSource: {fileID: 7492152315914914199}
   volume: 1
 --- !u!1 &5872460947877221758
@@ -337,7 +337,7 @@ SpriteRenderer:
   m_SortingLayerID: 174641909
   m_SortingLayer: 6
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: dc1a5260470ab9d43a040c4e9c89bead, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -345,7 +345,7 @@ SpriteRenderer:
   m_Size: {x: 0.5625, y: 1.15625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &8902852155481167915
@@ -607,9 +607,9 @@ GameObject:
   - component: {fileID: 7468461326731122851}
   - component: {fileID: 7468461326731122849}
   - component: {fileID: 5889733801652202094}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Agent
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -680,9 +680,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925cf9afbafd20c4aace090abecc9e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentDataSO: {fileID: 11400000, guid: e14391fa39e665047a1ad741680dfd02, type: 2}
+  agentDataSO: {fileID: 0}
   rb2d: {fileID: 0}
-  playerInput: {fileID: 0}
   animationManager: {fileID: 0}
   agentRenderer: {fileID: 0}
   groundDetector: {fileID: 0}
@@ -695,19 +694,7 @@ MonoBehaviour:
   stateName: 
   <OnRespawnRequired>k__BackingField:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: RespawnSystem.RespawnPointManager, Assembly-CSharp
-        m_MethodName: Respawn
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7468461326731122863}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   <OnAgentDie>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
@@ -787,19 +774,7 @@ MonoBehaviour:
       m_Calls: []
   OnInitialHealth:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: HealthUI, Assembly-CSharp
-        m_MethodName: Initialize
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &7468461326805162488
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,7 +903,6 @@ MonoBehaviour:
   OnStep:
     m_PersistentCalls:
       m_Calls: []
-  ClimbState: {fileID: 7468461326805162482}
 --- !u!114 &7468461326805162482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1040,22 +1014,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   OnExit:
     m_PersistentCalls:
       m_Calls: []
-  timeDelayRespawn: 3
+  timeDelayRespawn: 2
 --- !u!114 &9215954316727463036
 MonoBehaviour:
   m_ObjectHideFlags: 0

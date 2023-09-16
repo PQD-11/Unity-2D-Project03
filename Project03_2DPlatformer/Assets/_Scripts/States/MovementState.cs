@@ -55,7 +55,7 @@ public class MovementState : State
 
     protected void CalculateVelocity()
     {
-        CalculateSpeed(agent.playerInput.MovementVector, movementData);
+        CalculateSpeed(agent.agentInput.MovementVector, movementData);
         CalculateHorizontalDirection(movementData);
         movementData.currentVelocity = Vector3.right * movementData.horizontalMovementDirection * movementData.currentSpeed;
         movementData.currentVelocity.y = agent.rb2d.velocity.y;
@@ -76,11 +76,11 @@ public class MovementState : State
 
     protected void CalculateHorizontalDirection(MovementData movementData)
     {
-        if (agent.playerInput.MovementVector.x > 0)
+        if (agent.agentInput.MovementVector.x > 0)
         {
             movementData.horizontalMovementDirection = 1;
         }
-        else if (agent.playerInput.MovementVector.x < 0)
+        else if (agent.agentInput.MovementVector.x < 0)
         {
             movementData.horizontalMovementDirection = -1;
         }

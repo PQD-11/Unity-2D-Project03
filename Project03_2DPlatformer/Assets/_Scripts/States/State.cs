@@ -18,10 +18,10 @@ public abstract class State : MonoBehaviour
 
     public void Enter()
     {
-        agent.playerInput.OnAttack += HandleAttack;
-        agent.playerInput.OnJumpPressed += HandleJumpPressed;
-        agent.playerInput.OnJumpReleased += HandleJumpReleased;
-        agent.playerInput.OnMovement += HandleMovement;
+        agent.agentInput.OnAttack += HandleAttack;
+        agent.agentInput.OnJumpPressed += HandleJumpPressed;
+        agent.agentInput.OnJumpReleased += HandleJumpReleased;
+        agent.agentInput.OnMovement += HandleMovement;
         // agent.playerInput.OnWeaponChange += HandleWeaponChange;
         OnEnter?.Invoke();
         EnterState();
@@ -78,10 +78,10 @@ public abstract class State : MonoBehaviour
 
     public void Exit()
     {
-        agent.playerInput.OnAttack -= HandleAttack;
-        agent.playerInput.OnJumpPressed -= HandleJumpPressed;
-        agent.playerInput.OnJumpReleased -= HandleJumpReleased;
-        agent.playerInput.OnMovement -= HandleMovement;
+        agent.agentInput.OnAttack -= HandleAttack;
+        agent.agentInput.OnJumpPressed -= HandleJumpPressed;
+        agent.agentInput.OnJumpReleased -= HandleJumpReleased;
+        agent.agentInput.OnMovement -= HandleMovement;
         // agent.playerInput.OnWeaponChange += HandleWeaponChange;
         OnExit?.Invoke();
         ExitState();

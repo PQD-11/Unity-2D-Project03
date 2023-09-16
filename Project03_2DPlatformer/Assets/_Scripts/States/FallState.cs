@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FallState : MovementState
 {
-    [SerializeField] public State ClimbState;
+    // [SerializeField] public State ClimbState;
     protected override void EnterState()
     {
         agent.animationManager.PlayAnimation(AnimationType.fall);
@@ -28,7 +28,7 @@ public class FallState : MovementState
         {
             agent.TransitionToState(agent.stateFactory.GetState(StateType.Idle));
         }
-        else if (agent.climbingDetector.CanClimb && Mathf.Abs(agent.playerInput.MovementVector.y) > 0)
+        else if (agent.climbingDetector.CanClimb && Mathf.Abs(agent.agentInput.MovementVector.y) > 0)
         {
             agent.TransitionToState(agent.stateFactory.GetState(StateType.Climbing));
         }

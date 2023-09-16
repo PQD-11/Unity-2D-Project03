@@ -13,6 +13,9 @@ public class FragileBlock : MonoBehaviour, IHittable
         OnHit?.Invoke();
     }
 
+/// <summary>
+/// DestroySelf: Event called at the of the animation 
+/// </summary>
     public void DestroySelf()
     {
         Destroy(gameObject);
