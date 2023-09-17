@@ -229,6 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4526436088777959694}
   - component: {fileID: 6651527951077583191}
+  - component: {fileID: 731801269545235302}
   m_Layer: 0
   m_Name: GetHitFeedback
   m_TagString: Untagged
@@ -265,6 +266,20 @@ MonoBehaviour:
   audioClip: {fileID: 0}
   targetAudioSource: {fileID: 7492152315914914199}
   volume: 1
+--- !u!114 &731801269545235302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5119413505981334394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67143656a1df54646a18583ab8ca5e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 7468461326057712496}
+  feedbackTime: 0.1
 --- !u!1 &5872460947877221758
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,7 +438,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: af846d276f77f70499c4e6ac745514da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -607,6 +622,8 @@ GameObject:
   - component: {fileID: 7468461326731122851}
   - component: {fileID: 7468461326731122849}
   - component: {fileID: 5889733801652202094}
+  - component: {fileID: 6157257396958552277}
+  - component: {fileID: 6417401085905418202}
   m_Layer: 0
   m_Name: Agent
   m_TagString: Untagged
@@ -766,6 +783,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6417401085905418202}
+        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
+        m_MethodName: StopAllCoroutines
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6417401085905418202}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnRestoreHealth:
     m_PersistentCalls:
       m_Calls: []
@@ -775,6 +816,38 @@ MonoBehaviour:
   OnInitialHealth:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6157257396958552277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7468461326731122863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e5361c80132f0d4c99c15d1d068c567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 7468461326731122861}
+  force: 10
+--- !u!114 &6417401085905418202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7468461326731122863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1399ceee4d170d944a370ae1c45c8d0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider2Ds: []
+  immortalityTime: 1
+  spriteRenderer: {fileID: 7468461326057712496}
+  flashDelay: 0.1
+  flashAlpha: 0.5
+  isImmortal: 0
 --- !u!1 &7468461326805162488
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,7 +906,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnEnter:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7468461326731122850}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6417401085905418202}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnExit:
     m_PersistentCalls:
       m_Calls: []
@@ -984,6 +1081,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 731801269545235302}
+        m_TargetAssemblyTypeName: SVS.Feedback.FlashWhiteFeedback, Assembly-CSharp
+        m_MethodName: PlayFeedback
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnExit:
     m_PersistentCalls:
       m_Calls: []
@@ -1006,6 +1115,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: AudioFeedback, Assembly-CSharp
         m_MethodName: PlayClip
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7468461326731122850}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

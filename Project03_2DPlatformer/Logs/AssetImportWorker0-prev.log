@@ -1,0 +1,133 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.3f1 (76626098c1c4) revision 7758432'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home Single Language; OS build 19045.3448; Version 2009; 64bit' Language: 'en' Physical Memory: 8072 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.3f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Unity/Unity-2D-Project03/Project03_2DPlatformer
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50549
+Successfully changed project path to: D:/Unity/Unity-2D-Project03/Project03_2DPlatformer
+D:/Unity/Unity-2D-Project03/Project03_2DPlatformer
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 71.26 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.3f1 (76626098c1c4)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Unity/Unity-2D-Project03/Project03_2DPlatformer/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce MX110 (ID=0x174e)
+    Vendor:   
+    VRAM:     2010 MB
+    Driver:   27.21.14.5749
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56472
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001607 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 70.31 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.128 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002123 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 74.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.329 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3177 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 141.4 MB.
+System memory in use after: 141.6 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3626.
+Total: 3.356900 ms (FindLiveObjects: 0.438400 ms CreateObjectMapping: 0.188100 ms MarkObjects: 2.581300 ms  DeleteObjects: 0.147300 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/_Shaders
+  artifactKey: Guid(5f1725ffaa092cc498dbb0ae98066f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Shaders using Guid(5f1725ffaa092cc498dbb0ae98066f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ad97035e9d4fcacf89484257921ee64') in 0.013716 seconds
+  Import took 0.020689 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 300.964843 seconds.
+  path: Assets/Settings/UniversalRenderPipelineAsset 1.asset
+  artifactKey: Guid(7d44827bd9858604fa3b91dd2a8498ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/UniversalRenderPipelineAsset 1.asset using Guid(7d44827bd9858604fa3b91dd2a8498ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3669bf00b4ca4017345ffbd052ebf0c6') in 0.048451 seconds
+  Import took 0.056147 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/Settings/UniversalRenderPipelineAsset 1_Renderer.asset
+  artifactKey: Guid(6cc384913765ce447be6df1afe9e2fa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/UniversalRenderPipelineAsset 1_Renderer.asset using Guid(6cc384913765ce447be6df1afe9e2fa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caddc98c5cc72626511c887d52859b09') in 0.009544 seconds
+  Import took 0.016035 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 75.845316 seconds.
+  path: Assets/Settings/New 2D Renderer Data.asset
+  artifactKey: Guid(ae9e7062e8c662547a168d8cf36aa069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/New 2D Renderer Data.asset using Guid(ae9e7062e8c662547a168d8cf36aa069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4da45d9278716bd80ef0e5c32eef6796') in 0.010166 seconds
+  Import took 0.016048 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 194.028628 seconds.
+  path: Assets/_Shaders/New Shader Graph.shadergraph
+  artifactKey: Guid(660ca8b46faecc64eb3d9b9e0736d8e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Shaders/New Shader Graph.shadergraph using Guid(660ca8b46faecc64eb3d9b9e0736d8e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4eab258e1a8c456123fa78e8ce6f497b') in 0.012066 seconds
+  Import took 0.018006 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.732161 seconds.
+  path: Assets/_Shaders/New Shader Graph.shadergraph
+  artifactKey: Guid(660ca8b46faecc64eb3d9b9e0736d8e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Shaders/New Shader Graph.shadergraph using Guid(660ca8b46faecc64eb3d9b9e0736d8e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4eab258e1a8c456123fa78e8ce6f497b') in 0.004300 seconds
+  Import took 0.011229 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 68.280092 seconds.
+  path: Assets/_Shaders/Unlit Solid Color Shader.shadergraph
+  artifactKey: Guid(660ca8b46faecc64eb3d9b9e0736d8e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Shaders/Unlit Solid Color Shader.shadergraph using Guid(660ca8b46faecc64eb3d9b9e0736d8e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '421f533f15f259c14175068c8df793f4') in 0.009576 seconds
+  Import took 0.016941 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

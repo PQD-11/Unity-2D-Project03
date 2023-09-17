@@ -56,6 +56,7 @@
      <Compile Include="Assets\_Scripts\States\State.cs" />
      <Compile Include="Assets\_Scripts\Enemies\AIPatrollingEnemyBrain.cs" />
      <Compile Include="Assets\_Scripts\States\JumpState.cs" />
+     <Compile Include="Assets\_Scripts\Common\DestroyUtils.cs" />
      <Compile Include="Assets\_Scripts\GroundDetector.cs" />
      <Compile Include="Assets\_Scripts\PlayerInput.cs" />
      <Compile Include="Assets\_Scripts\ClimbingDetector.cs" />
@@ -81,7 +82,10 @@
      <Compile Include="Assets\_Scripts\RespawnSystem\RespawnPointManager.cs" />
      <Compile Include="Assets\_Scripts\IAgentInput.cs" />
      <Compile Include="Assets\_Scripts\IsGroundedCheck.cs" />
-     <Compile Include="Assets\_Scripts\Common\DestroyUtils.cs" />
+     <Compile Include="Assets\_Scripts\Feedback\FlashWhiteFeedback.cs" />
+     <Compile Include="Assets\_Scripts\Feedback\HittableKnockBack.cs" />
+     <Compile Include="Assets\_Scripts\Feedback\HittaleTempImmortality.cs" />
+     <Compile Include="Assets\_Scripts\UI\Animations\UIScaleElement.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
