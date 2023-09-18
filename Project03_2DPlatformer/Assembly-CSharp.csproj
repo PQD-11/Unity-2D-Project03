@@ -43,6 +43,7 @@
      <Compile Include="Assets\_Scripts\Enemies\AIEndPlatformDetector.cs" />
      <Compile Include="Assets\_Scripts\States\FallState.cs" />
      <Compile Include="Assets\_Scripts\States\MovementState.cs" />
+     <Compile Include="Assets\_Scripts\Feedback\FlashWhiteFeedback.cs" />
      <Compile Include="Assets\_Scripts\States\AgentRenderer.cs" />
      <Compile Include="Assets\_Scripts\States\AttackState.cs" />
      <Compile Include="Assets\_Scripts\Weapons\WeaponStorage.cs" />
@@ -64,6 +65,7 @@
      <Compile Include="Assets\_Scripts\Weapons\GiveAgentAWeapon.cs" />
      <Compile Include="Assets\_Scripts\UI\LifeElementUI.cs" />
      <Compile Include="Assets\_Scripts\Weapons\IHittable.cs" />
+     <Compile Include="Assets\_Scripts\Feedback\HittaleTempImmortality.cs" />
      <Compile Include="Assets\_Scripts\Enemies\AIBehavior.cs" />
      <Compile Include="Assets\_Scripts\States\ClimbingState.cs" />
      <Compile Include="Assets\_Scripts\DestroyFallingObject.cs" />
@@ -73,8 +75,10 @@
      <Compile Include="Assets\_Scripts\States\GetHitState.cs" />
      <Compile Include="Assets\_Scripts\Damageable.cs" />
      <Compile Include="Assets\_Scripts\States\DieState.cs" />
+     <Compile Include="Assets\_Scripts\Feedback\HittableKnockBack.cs" />
      <Compile Include="Assets\_Scripts\UI\PointsUI.cs" />
      <Compile Include="Assets\_Scripts\Enemies\AIDetectorForMeleeAttack.cs" />
+     <Compile Include="Assets\_Scripts\UI\Animations\UIScaleElement.cs" />
      <Compile Include="Assets\_Scripts\Enemies\AIEnemy.cs" />
      <Compile Include="Assets\_Scripts\RespawnSystem\RespawnPoint.cs" />
      <Compile Include="Assets\_Scripts\ParallaxEffect.cs" />
@@ -82,10 +86,13 @@
      <Compile Include="Assets\_Scripts\RespawnSystem\RespawnPointManager.cs" />
      <Compile Include="Assets\_Scripts\IAgentInput.cs" />
      <Compile Include="Assets\_Scripts\IsGroundedCheck.cs" />
-     <Compile Include="Assets\_Scripts\Feedback\FlashWhiteFeedback.cs" />
-     <Compile Include="Assets\_Scripts\Feedback\HittableKnockBack.cs" />
-     <Compile Include="Assets\_Scripts\Feedback\HittaleTempImmortality.cs" />
-     <Compile Include="Assets\_Scripts\UI\Animations\UIScaleElement.cs" />
+     <Compile Include="Assets\_Scripts\PickableItems\Pickable.cs" />
+     <Compile Include="Assets\_Scripts\PickableItems\HealthPickable.cs" />
+     <Compile Include="Assets\_Scripts\Common\OnTrigger2DUtils.cs" />
+     <Compile Include="Assets\_Scripts\Common\StopRb2dMovementUtils.cs" />
+     <Compile Include="Assets\_Scripts\Animations\HooverAnimation.cs" />
+     <Compile Include="Assets\_Scripts\Common\InstantiateUtils.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\ThrowableWeapon.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

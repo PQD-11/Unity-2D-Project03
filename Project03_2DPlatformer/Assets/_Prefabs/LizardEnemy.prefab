@@ -207,6 +207,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 932482e9ebe33fe448f82274d52be94a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2027700434772052449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6120227100331536731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3e991ce67ce0c4083ab11adff4acc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToInstantiate: {fileID: 2215080737241053771, guid: 052a097d07c433e4daf305f4f097ce2c, type: 3}
 --- !u!1 &6780430772821536276
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,6 +353,34 @@ PrefabInstance:
       propertyPath: audioClip
       value: 
       objectReference: {fileID: 8300000, guid: d16bc037559a1a9459bf0766771e943e, type: 3}
+    - target: {fileID: 1360309573777786876, guid: cf7941741a339d846925c2d5b47398bf, type: 3}
+      propertyPath: OnEnter.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360309573777786876, guid: cf7941741a339d846925c2d5b47398bf, type: 3}
+      propertyPath: OnEnter.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360309573777786876, guid: cf7941741a339d846925c2d5b47398bf, type: 3}
+      propertyPath: OnEnter.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2027700434772052449}
+    - target: {fileID: 1360309573777786876, guid: cf7941741a339d846925c2d5b47398bf, type: 3}
+      propertyPath: OnEnter.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360309573777786876, guid: cf7941741a339d846925c2d5b47398bf, type: 3}
+      propertyPath: OnEnter.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: CreateObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360309573777786876, guid: cf7941741a339d846925c2d5b47398bf, type: 3}
+      propertyPath: OnEnter.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: SVS.Common.InstantiateUtils, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360309573777786876, guid: cf7941741a339d846925c2d5b47398bf, type: 3}
+      propertyPath: OnEnter.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6651527951077583191, guid: cf7941741a339d846925c2d5b47398bf, type: 3}
       propertyPath: audioClip
       value: 
@@ -574,3 +615,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac05ebe06c41d344387cf6e6115fbf02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6120227100331536731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 465244121471856220, guid: cf7941741a339d846925c2d5b47398bf, type: 3}
+  m_PrefabInstance: {fileID: 5952504230413721351}
+  m_PrefabAsset: {fileID: 0}
