@@ -41,6 +41,7 @@
      <Compile Include="Assets\_Scripts\Data\AgentDataSO.cs" />
      <Compile Include="Assets\_Scripts\States\StateFactory.cs" />
      <Compile Include="Assets\_Scripts\Weapons\MeleeWeaponData.cs" />
+     <Compile Include="Assets\_Scripts\UI\WeaponUI.cs" />
      <Compile Include="Assets\_Scripts\States\IdleState.cs" />
      <Compile Include="Assets\_Scripts\Enemies\AIEndPlatformDetector.cs" />
      <Compile Include="Assets\_Scripts\States\FallState.cs" />
@@ -52,6 +53,7 @@
      <Compile Include="Assets\_Scripts\UI\HealthUI.cs" />
      <Compile Include="Assets\_Scripts\States\MovementData.cs" />
      <Compile Include="Assets\_Scripts\AudioFeedback.cs" />
+     <Compile Include="Assets\_Scripts\PickableItems\WeaponPickable.cs" />
      <Compile Include="Assets\_Scripts\Common\OnTrigger2DUtils.cs" />
      <Compile Include="Assets\_Scripts\Enemies\AIBehaviorPatrol.cs" />
      <Compile Include="Assets\_Scripts\Enemies\AIBehaviorMeleeAttack.cs" />
@@ -72,6 +74,7 @@
      <Compile Include="Assets\_Scripts\Feedback\HittaleTempImmortality.cs" />
      <Compile Include="Assets\_Scripts\PickableItems\HealthPickable.cs" />
      <Compile Include="Assets\_Scripts\Enemies\AIBehavior.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\RangeWeaponData.cs" />
      <Compile Include="Assets\_Scripts\States\ClimbingState.cs" />
      <Compile Include="Assets\_Scripts\DestroyFallingObject.cs" />
      <Compile Include="Assets\_Scripts\Weapons\WeaponData.cs" />
@@ -93,9 +96,9 @@
      <Compile Include="Assets\_Scripts\RespawnSystem\RespawnPointManager.cs" />
      <Compile Include="Assets\_Scripts\IAgentInput.cs" />
      <Compile Include="Assets\_Scripts\IsGroundedCheck.cs" />
-     <Compile Include="Assets\_Scripts\Weapons\RangeWeaponData.cs" />
-     <Compile Include="Assets\_Scripts\PickableItems\WeaponPickable.cs" />
-     <Compile Include="Assets\_Scripts\UI\WeaponUI.cs" />
+     <Compile Include="Assets\_Scripts\Player\PlayerPoints.cs" />
+     <Compile Include="Assets\_Scripts\UI\Animations\UIScaleTextFont.cs" />
+     <Compile Include="Assets\_Scripts\PickableItems\PointPickable.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
