@@ -48,6 +48,18 @@ public class Agent : MonoBehaviour
     {
         agentInput.OnMovement += agentRenderer.FaceDirection;
         InitializeAgent();
+
+        agentInput.OnWeaponChange += SwapWeapon;
+    }
+
+    private void SwapWeapon()
+    {
+        if (agentWeaponManager == null)
+        {
+            return;
+        }
+
+        agentWeaponManager.SwapWeapon();
     }
 
     private void InitializeAgent()
@@ -105,5 +117,15 @@ public class Agent : MonoBehaviour
     public void GetHit()
     {
         currentState.GetHit();
+    }
+
+    public void PickUp(WeaponData weaponData)
+    {
+        if (agentWeaponManager == null)
+        {
+            return;
+        }
+
+        agentWeaponManager.PickUpWeapon(weaponData);
     }
 }

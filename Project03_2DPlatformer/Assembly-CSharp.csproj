@@ -36,6 +36,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scripts\Animations\HooverAnimation.cs" />
+     <Compile Include="Assets\_Scripts\Common\StopRb2dMovementUtils.cs" />
      <Compile Include="Assets\_Scripts\Data\AgentDataSO.cs" />
      <Compile Include="Assets\_Scripts\States\StateFactory.cs" />
      <Compile Include="Assets\_Scripts\Weapons\MeleeWeaponData.cs" />
@@ -50,8 +52,10 @@
      <Compile Include="Assets\_Scripts\UI\HealthUI.cs" />
      <Compile Include="Assets\_Scripts\States\MovementData.cs" />
      <Compile Include="Assets\_Scripts\AudioFeedback.cs" />
+     <Compile Include="Assets\_Scripts\Common\OnTrigger2DUtils.cs" />
      <Compile Include="Assets\_Scripts\Enemies\AIBehaviorPatrol.cs" />
      <Compile Include="Assets\_Scripts\Enemies\AIBehaviorMeleeAttack.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\ThrowableWeapon.cs" />
      <Compile Include="Assets\_Scripts\Obstacles\FragileBlock.cs" />
      <Compile Include="Assets\_Scripts\Agent.cs" />
      <Compile Include="Assets\_Scripts\States\State.cs" />
@@ -66,6 +70,7 @@
      <Compile Include="Assets\_Scripts\UI\LifeElementUI.cs" />
      <Compile Include="Assets\_Scripts\Weapons\IHittable.cs" />
      <Compile Include="Assets\_Scripts\Feedback\HittaleTempImmortality.cs" />
+     <Compile Include="Assets\_Scripts\PickableItems\HealthPickable.cs" />
      <Compile Include="Assets\_Scripts\Enemies\AIBehavior.cs" />
      <Compile Include="Assets\_Scripts\States\ClimbingState.cs" />
      <Compile Include="Assets\_Scripts\DestroyFallingObject.cs" />
@@ -82,17 +87,15 @@
      <Compile Include="Assets\_Scripts\Enemies\AIEnemy.cs" />
      <Compile Include="Assets\_Scripts\RespawnSystem\RespawnPoint.cs" />
      <Compile Include="Assets\_Scripts\ParallaxEffect.cs" />
+     <Compile Include="Assets\_Scripts\PickableItems\Pickable.cs" />
+     <Compile Include="Assets\_Scripts\Common\InstantiateUtils.cs" />
      <Compile Include="Assets\_Scripts\AgentAnimation.cs" />
      <Compile Include="Assets\_Scripts\RespawnSystem\RespawnPointManager.cs" />
      <Compile Include="Assets\_Scripts\IAgentInput.cs" />
      <Compile Include="Assets\_Scripts\IsGroundedCheck.cs" />
-     <Compile Include="Assets\_Scripts\PickableItems\Pickable.cs" />
-     <Compile Include="Assets\_Scripts\PickableItems\HealthPickable.cs" />
-     <Compile Include="Assets\_Scripts\Common\OnTrigger2DUtils.cs" />
-     <Compile Include="Assets\_Scripts\Common\StopRb2dMovementUtils.cs" />
-     <Compile Include="Assets\_Scripts\Animations\HooverAnimation.cs" />
-     <Compile Include="Assets\_Scripts\Common\InstantiateUtils.cs" />
-     <Compile Include="Assets\_Scripts\Weapons\ThrowableWeapon.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\RangeWeaponData.cs" />
+     <Compile Include="Assets\_Scripts\PickableItems\WeaponPickable.cs" />
+     <Compile Include="Assets\_Scripts\UI\WeaponUI.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
