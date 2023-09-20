@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42d976e3747dbe4db663a73cf608bb7, type: 3}
   m_Name: LizardEnemyAgentData
   m_EditorClassIdentifier: 
-  health: 3
+  health: 2
   maxSpeed: 2
   acceleration: 60
   deacceleration: 60
