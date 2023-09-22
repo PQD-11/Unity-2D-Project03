@@ -60,6 +60,7 @@
      <Compile Include="Assets\_Scripts\Enemies\AIBehaviorMeleeAttack.cs" />
      <Compile Include="Assets\_Scripts\Weapons\ThrowableWeapon.cs" />
      <Compile Include="Assets\_Scripts\Obstacles\FragileBlock.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\AIBehaviorShoot.cs" />
      <Compile Include="Assets\_Scripts\Agent.cs" />
      <Compile Include="Assets\_Scripts\States\State.cs" />
      <Compile Include="Assets\_Scripts\Enemies\AIPatrollingEnemyBrain.cs" />
@@ -79,6 +80,7 @@
      <Compile Include="Assets\_Scripts\States\ClimbingState.cs" />
      <Compile Include="Assets\_Scripts\Player\PlayerPoints.cs" />
      <Compile Include="Assets\_Scripts\DestroyFallingObject.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\AIStaticEnemyBrain.cs" />
      <Compile Include="Assets\_Scripts\Weapons\WeaponData.cs" />
      <Compile Include="Assets\_Scripts\Weapons\AgentWeaponManager.cs" />
      <Compile Include="Assets\_Scripts\UI\PlayerUI.cs" />
@@ -86,6 +88,7 @@
      <Compile Include="Assets\_Scripts\Damageable.cs" />
      <Compile Include="Assets\_Scripts\States\DieState.cs" />
      <Compile Include="Assets\_Scripts\Feedback\HittableKnockBack.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\AIPlayerDetector.cs" />
      <Compile Include="Assets\_Scripts\UI\Animations\UIScaleTextFont.cs" />
      <Compile Include="Assets\_Scripts\UI\PointsUI.cs" />
      <Compile Include="Assets\_Scripts\Enemies\AIDetectorForMeleeAttack.cs" />
@@ -99,9 +102,9 @@
      <Compile Include="Assets\_Scripts\RespawnSystem\RespawnPointManager.cs" />
      <Compile Include="Assets\_Scripts\IAgentInput.cs" />
      <Compile Include="Assets\_Scripts\IsGroundedCheck.cs" />
-     <Compile Include="Assets\_Scripts\Enemies\AIStaticEnemyBrain.cs" />
-     <Compile Include="Assets\_Scripts\Enemies\AIBehaviorShoot.cs" />
-     <Compile Include="Assets\_Scripts\Enemies\AIPlayerDetector.cs" />
+     <Compile Include="Assets\_Scripts\UI\Animations\UIShakeElement.cs" />
+     <Compile Include="Assets\_Scripts\UI\Cloud.cs" />
+     <Compile Include="Assets\_Scripts\UI\CloudSpawner.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

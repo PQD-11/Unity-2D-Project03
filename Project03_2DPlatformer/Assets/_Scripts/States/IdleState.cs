@@ -15,6 +15,23 @@ public class IdleState : State
         }
     }
 
+    public override void StateUpdate()
+    {
+        if (!agent.groundDetector.isGrounded)
+        {
+            return;
+        }
+
+        if (agent.climbingDetector.CanClimb && Mathf.Abs(agent.agentInput.MovementVector.y) > 0)
+        {
+            agent.TransitionToState(agent.stateFactory.GetState(StateType.Climbing));
+        }
+        else if (Mathf.Abs(agent.agentInput.MovementVector.x) > 0)
+        {
+            agent.TransitionToState(agent.stateFactory.GetState(StateType.Move));
+        }
+    }
+
     protected override void HandleMovement(Vector2 vector)
     {
         if (agent.climbingDetector.CanClimb && Mathf.Abs(vector.y) > 0)

@@ -10,7 +10,7 @@ namespace SVS.AI
 
         private void Update()
         {
-            // AttackBehavior.PerformAction(this);
+            AttackBehavior.PerformAction(this);
         }
     }
 }

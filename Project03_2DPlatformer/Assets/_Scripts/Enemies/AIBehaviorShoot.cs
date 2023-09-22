@@ -2,17 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIBehaviorShoot : MonoBehaviour
+namespace SVS.AI
 {
-    // Start is called before the first frame update
-    void Start()
+    public class AIBehaviorShoot : AIBehavior
     {
-        
-    }
+        public AIPlayerDetector playerDetector;
+        [SerializeField] private bool isWaiting;
+        [SerializeField] private float delay = 1;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public override void PerformAction(AIEnemy enemyAI)
+        {
+            if (isWaiting) { return; }
+            if (playerDetector.PlayerDetected)
+            {
+                isWaiting = true;
+                enemyAI.CallOnMovement(playerDetector.DirectionToTarget);
+                enemyAI.CallOnAttack();
+                StartCoroutine(AttackDelayCoroutine());
+            }
+        }
+
+        IEnumerator AttackDelayCoroutine()
+        {
+            yield return new WaitForSecondsRealtime(delay);
+            isWaiting = false;
+        }
     }
 }
