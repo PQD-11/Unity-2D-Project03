@@ -6,7 +6,7 @@ using UnityEngine.U2D;
 
 public class DieState : State
 {
-    public float timeDelayRespawn = 1;
+    public float timeToWaitAfterDieAction = 1;
 
     protected override void EnterState()
     {
@@ -46,7 +46,7 @@ public class DieState : State
 
     IEnumerator WaitCoroutine()
     {
-        yield return new WaitForSecondsRealtime(timeDelayRespawn);
+        yield return new WaitForSecondsRealtime(timeToWaitAfterDieAction);
         agent.OnAgentDie?.Invoke();
     }
 

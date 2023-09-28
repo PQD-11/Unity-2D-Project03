@@ -46,14 +46,17 @@
      <Compile Include="Assets\_Scripts\UI\WeaponUI.cs" />
      <Compile Include="Assets\_Scripts\States\IdleState.cs" />
      <Compile Include="Assets\_Scripts\Enemies\AIEndPlatformDetector.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\PatrolFlyingPath.cs" />
      <Compile Include="Assets\_Scripts\States\FallState.cs" />
      <Compile Include="Assets\_Scripts\States\MovementState.cs" />
      <Compile Include="Assets\_Scripts\Feedback\FlashWhiteFeedback.cs" />
      <Compile Include="Assets\_Scripts\States\AgentRenderer.cs" />
      <Compile Include="Assets\_Scripts\States\AttackState.cs" />
+     <Compile Include="Assets\_Scripts\UI\MenuInGameUI.cs" />
      <Compile Include="Assets\_Scripts\Weapons\WeaponStorage.cs" />
      <Compile Include="Assets\_Scripts\UI\HealthUI.cs" />
      <Compile Include="Assets\_Scripts\States\MovementData.cs" />
+     <Compile Include="Assets\_Scripts\States\FlyState.cs" />
      <Compile Include="Assets\_Scripts\AudioFeedback.cs" />
      <Compile Include="Assets\_Scripts\PickableItems\WeaponPickable.cs" />
      <Compile Include="Assets\_Scripts\Common\OnTrigger2DUtils.cs" />
@@ -99,6 +102,7 @@
      <Compile Include="Assets\_Scripts\States\GetHitState.cs" />
      <Compile Include="Assets\_Scripts\Damageable.cs" />
      <Compile Include="Assets\_Scripts\States\DieState.cs" />
+     <Compile Include="Assets\_Scripts\Obstacles\PlatformColliderAdjuster.cs" />
      <Compile Include="Assets\_Scripts\Feedback\HittableKnockBack.cs" />
      <Compile Include="Assets\_Scripts\Enemies\AIPlayerDetector.cs" />
      <Compile Include="Assets\_Scripts\UI\Animations\UIScaleTextFont.cs" />
@@ -115,7 +119,7 @@
      <Compile Include="Assets\_Scripts\RespawnSystem\RespawnPointManager.cs" />
      <Compile Include="Assets\_Scripts\IAgentInput.cs" />
      <Compile Include="Assets\_Scripts\IsGroundedCheck.cs" />
-     <Compile Include="Assets\_Scripts\UI\MenuInGameUI.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\AIBehaviorPatrolPath.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

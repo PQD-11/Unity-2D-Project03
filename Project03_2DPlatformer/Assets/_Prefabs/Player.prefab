@@ -2248,6 +2248,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: f25b087c805825847b8e4c620d9bc989, type: 3}
     - target: {fileID: 1360309573777786876, guid: cf7941741a339d846925c2d5b47398bf, type: 3}
+      propertyPath: timeDelayRespawn
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360309573777786876, guid: cf7941741a339d846925c2d5b47398bf, type: 3}
+      propertyPath: timeToWaitAfterDieAction
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360309573777786876, guid: cf7941741a339d846925c2d5b47398bf, type: 3}
       propertyPath: OnEnter.m_PersistentCalls.m_Calls.Array.size
       value: 3
       objectReference: {fileID: 0}
