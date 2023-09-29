@@ -108,6 +108,7 @@
      <Compile Include="Assets\_Scripts\UI\Animations\UIScaleTextFont.cs" />
      <Compile Include="Assets\_Scripts\UI\PointsUI.cs" />
      <Compile Include="Assets\_Scripts\Enemies\AIDetectorForMeleeAttack.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\AIBehaviorPatrolPath.cs" />
      <Compile Include="Assets\_Scripts\UI\Animations\UIScaleElement.cs" />
      <Compile Include="Assets\_Scripts\LevelManagement\ExitLevelTransition.cs" />
      <Compile Include="Assets\_Scripts\Enemies\AIEnemy.cs" />
@@ -119,7 +120,15 @@
      <Compile Include="Assets\_Scripts\RespawnSystem\RespawnPointManager.cs" />
      <Compile Include="Assets\_Scripts\IAgentInput.cs" />
      <Compile Include="Assets\_Scripts\IsGroundedCheck.cs" />
-     <Compile Include="Assets\_Scripts\Enemies\AIBehaviorPatrolPath.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\AIPlayerEnterAreaDetector.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\BossAI\AIDataBoard.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\BossAI\AIBossEnemyBrain.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\BossAI\AIBehaviorBossIdle.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\BossAI\AIBehaviorBossCharge.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\BossAI\AIBehaviorBossWait.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\BossAI\AIBehaviorBossMeleeAttack.cs" />
+     <Compile Include="Assets\_Scripts\Common\FollowCameraUtils.cs" />
+     <Compile Include="Assets\_Scripts\UI\BossUI.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
