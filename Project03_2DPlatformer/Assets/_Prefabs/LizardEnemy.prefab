@@ -381,6 +381,14 @@ PrefabInstance:
       propertyPath: OnEnter.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6157257396958552277, guid: cf7941741a339d846925c2d5b47398bf, type: 3}
+      propertyPath: force
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417401085905418202, guid: cf7941741a339d846925c2d5b47398bf, type: 3}
+      propertyPath: immortalityTime
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6651527951077583191, guid: cf7941741a339d846925c2d5b47398bf, type: 3}
       propertyPath: audioClip
       value: 

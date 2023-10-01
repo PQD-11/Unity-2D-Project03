@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using SVS.AI;
-using UnityEditor.Scripting;
+// using UnityEditor.Scripting;
 using UnityEngine;
 
 namespace SVS.AI
